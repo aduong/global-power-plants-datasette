@@ -23,4 +23,4 @@ RUN apt-get update \
 EXPOSE 8001
 
 CMD datasette serve global-power-plants.db --host 0.0.0.0 \
-    --cors --port 8001 --inspect-file inspect-data.json -m metadata.json
+    --cors --port ${PORT:-8001} --inspect-file inspect-data.json -m metadata.json
